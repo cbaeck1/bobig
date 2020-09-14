@@ -1,8 +1,0 @@
-TBIPDV2018,1,1
-N,N,N,N,N,N,N,N,N,N,N,N
-TBIPDV2018,TBIPDV2018,TBIPDV2018,TBIPDV2018,TBIPDV2018,BFC,BFC,BFC,BFC,BFC,BFC,BFC
-ASK_ID,RSHP_ID,PRVDR_CD,HASH_DID,DATASET,STD_YYYY,AGE,GAIBJA_TYPE,RVSN_ADDR_CD,CALC_CTRB_VTILE_FD,CNT_ID_HHHI_FD,CMPR_DSB_GRADE
-신청_ID,연구가설_ID,제공기관코드,해시DID,데이터셋,기준연도,연령,가입자 구분,실거주주소코드(시군구),보험료(10분위),증인원수_기준일자,종합장애등급코드
-문자,문자,문자,문자,문자,문자,숫자,문자,문자,숫자,숫자,문자
-10,5,5,64,200,8,8,1,10,8,8,1
-신청_ID,연구가설_ID,제공기관코드,해시DID,데이터셋,기준연도,연령,가입자 구분,실거주주소코드(시군구),보험료(10분위),증인원수_기준일자,종합장애등급코드

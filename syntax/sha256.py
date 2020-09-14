@@ -1,8 +1,13 @@
 import hashlib
 
-line = 'ncc최은숙7101132'
+# E3CD087091E9404A9DB075FF43CEB1A2전윤철3809055
+# AB04382BD6B54D21023D3D99A2B9E389C5E375AB7312AB881104E46137BC8BB0 
+# AB04382BD6B54D21023D3D99A2B9E389C5E375AB7312AB881104E46137BC8BB0
 
-encoded_string = line.encode()
-hexdigest = hashlib.sha256(encoded_string).hexdigest().upper()
-
-print(hexdigest)
+string = 'E3CD087091E9404A9DB075FF43CEB1A2전윤철3809055'
+print(string)
+encoded_string = string.encode()
+print(encoded_string)
+hexdigest = hashlib.sha256(encoded_string).hexdigest()
+print(hexdigest.upper())
+ 

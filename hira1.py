@@ -7,16 +7,26 @@ import os, sys, csv
 # dataset명도 없음
 '''
 
-# print(sys.argv[1], sys.argv[2], sys.argv[3])
+#base_dir = '/esb_nfs/esbmst/indigo/201800002/1'
+#out_dir = base_dir +'/new_data'
+#data_filenames = os.listdir(base_dir +'/data/A0001/1/')
+#header_filenames = os.listdir(base_dir +'/header')
 
-base_dir = 'c:/1/yyyy'
-out_dir = base_dir +'/new_data'
-data_filenames = os.listdir(base_dir +'/data')
-header_filenames = os.listdir(base_dir +'/header')
+if __name__ == "__main__":
+    base_dir = sys.argv[1]
+    out_dir = sys.argv[2] 
+    data_dir = sys.argv[3] 
+    header_dir = sys.argv[4]
+
+data_filenames = os.listdir(data_dir)
+header_filenames = os.listdir(header_dir)
+
+print(base_dir, out_dir, data_dir, header_dir)
+
 
 for header_filename in header_filenames:
     # full_filename = os.path.join(dirname, filename)
-    # print(header_filename)
+    print(header_filename)
     header = header_filename.split('_')
     header_tmp = header[0] +header[1] +header[2] +header[3] +header[4] +header[5] +header[6]
 
@@ -28,8 +38,8 @@ for header_filename in header_filenames:
         data_total = data_1[7]
 
         if header_tmp == data_tmp:
-            file_header = open(base_dir +'/header/' +header_filename, mode='rt', encoding='utf-8')
-            file_content = open(base_dir +'/data/' +data_filename, mode='rt', encoding='utf-8')
+            file_header = open(header_dir +'/' +header_filename, mode='rt', encoding='utf-8')
+            file_content = open(data_dir +'/' +data_filename, mode='rt', encoding='utf-8')
             file_write = open(out_dir +'/' +data_filename, mode='wt', encoding='utf-8', newline='')
             full_txt = ""
             full_txt = file_header.read()
@@ -51,4 +61,6 @@ for header_filename in header_filenames:
             file_write.close()
 
         else:
-            print("NO!!!")
+            print('not start' ,header_tmp ,data_tmp)
+
+
